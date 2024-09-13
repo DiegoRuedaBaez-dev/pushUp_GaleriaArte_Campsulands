@@ -1,0 +1,427 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+#header {
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #d447ff;
+}
+
+/* Banner Principal */
+#banner {
+    background-image: url('/img/portada.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 80px; /* Espacio para que no se superponga con el header */
+    position: relative;
+    color: white;
+}
+
+.banner-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.banner-buttons button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.banner-buttons button:hover {
+    background-color: #d447ff;
+    transform: scale(1.05);
+}
+
+/* Galería */
+#galeria {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Contenedor de la galería */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: 30px;
+}
+
+/* Estilos para cada imagen en la galería */
+.coleccion {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.coleccion img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.coleccion:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.coleccion:hover .overlay {
+    opacity: 1;
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}
+
+#contacto {
+    padding: 80px 20px 20px; /* Ajusta el padding superior para dejar espacio para el header */
+    margin: 0 auto;
+    background-color: #f9f9f9; /* Fondo suave */
+    border-radius: 8px;
+    max-width: 1200px;
+}
+
+#contacto h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#contacto p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contact-info li {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #333;
+}
+
+/* Button Styles */
+.schedule-appointment {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.schedule-appointment:hover {
+    background-color: #d447ff;
+}
+
+/* Footer Activities Styles */
+.footer-activities {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-activities h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.activity {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.activity i {
+    font-size: 2em;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.activity-info {
+    flex: 1;
+}
+
+.activity-info h4 {
+    font-size: 1.3em;
+    margin: 0;
+    color: #333;
+}
+
+.activity-info p {
+    font-size: 1em;
+    margin: 5px 0 0;
+    color: #555;
+}
+/* Footer */
+footer {
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li {
+    margin: 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d447ff;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-info i {
+    color: #d447ff;
+    margin-right: 5px;
+}
+
+/* Estilos para las Actividades en el Footer */
+.footer-activities {
+    margin-top: 20px;
+}
+
+.footer-activities h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.activity {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.activity i {
+    font-size: 2em;
+    margin-right: 10px;
+    color: #333;
+}
+
+.activity-info h4 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.activity-info p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+}
+
+/* Estilos para el Lightbox */
+.lightbox {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con opacidad */
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+}
+
+.lightbox-slides {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-slides img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #d447ff;
+}
+
+@media (max-width: 768px) {
+    #contacto {
+        padding: 60px 20px 20px; /* Ajuste para pantallas más pequeñas */
+    }
+}

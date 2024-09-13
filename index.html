@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de Arte Moderno - Descubre obras únicas y participa en actividades exclusivas.">
+    <meta name="keywords" content="arte, galería, exposiciones, arte moderno, visitas, cultura">
+    <meta name="author" content="Tu nombre o nombre de la galería">
+    <title>Galería de D'ante</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navegación -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <h1>Galería de D'ante</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#galeria"><i class="fas fa-images"></i> Exposiciones</a></li>
+                <li><a href="#contacto"><i class="fas fa-calendar-alt"></i> Agendar Visita</a></li>
+                <li><a href="#artistas"><i class="fas fa-paint-brush"></i> Artistas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section id="banner" style="background-image: url('/img/portada.jpg'); background-size: cover; background-position: center;">
+        <div class="banner-content">
+            <h2>Explora el Arte Moderno</h2>
+            <p>Descubre obras únicas, exposiciones exclusivas y experiencias interactivas.</p>
+            <div class="banner-buttons">
+                <button onclick="scrollToSection('galeria')"><i class="fas fa-arrow-down"></i> Ir a Galería</button>
+                <button onclick="scrollToSection('contacto')"><i class="fas fa-calendar-check"></i> Agendar Visita</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Galería de Imágenes -->
+    <section id="galeria">
+        <h2>Colecciones Destacadas</h2>
+        <div class="image-gallery">
+            <!-- Agregamos imágenes a la galería -->
+            <div class="coleccion">
+                <img src="/img/abstract1.jpg" alt="Obra 1" onclick="openLightbox();toSlide(1)">
+                <div class="overlay">
+                    <h3>Sinfonía de Colores</h3>
+                    <p>Una explosión de tonos vivos que se fusionan en una danza caótica pero armoniosa. Esta obra captura la energía y la emoción a través de una paleta audaz y pinceladas dinámicas</p>
+                </div>
+            </div>
+            <div class="coleccion">
+                <img src="/img/abstract2.jpg" alt="Obra 2" onclick="openLightbox();toSlide(2)">
+                <div class="overlay">
+                    <h3>Ecos del Vacio</h3>
+                    <p>Una composición vibrante que explora la relación entre color y forma. Las formas geométricas se entrelazan en un juego de contrastes y sutilezas, evocando una sensación de profundidad y misterio.</p>
+                </div>
+            </div>
+            <div class="coleccion">
+                <img src="/img/abstract3.jpg" alt="Obra 3" onclick="openLightbox();toSlide(3)">
+                <div class="overlay">
+                    <h3>Rostros Fragmentados</h3>
+                    <p>Una serie de formas y colores entrelazados que desafían la percepción de la realidad. La pieza invita al espectador a descifrar las expresiones ocultas en un torbellino de líneas y sombras</p>
+                </div>
+            </div>
+            <div class="coleccion">
+                <img src="/img/surreal1.jpg" alt="Obra 6">
+                <div class="overlay">
+                    <h3>Sueños de Silencio</h3>
+                    <p>Un paisaje onírico donde la realidad y la fantasía se funden en una armonía inquietante. Los elementos flotantes y las perspectivas distorsionadas crean una atmósfera de asombro y desasosiego.</p>
+                </div>
+            </div>
+            <div class="coleccion">
+                <img src="/img/surreal2.jpg" alt="Obra 6">
+                <div class="overlay">
+                    <h3>Máscaras de la Realidad</h3>
+                    <p>Una pieza que presenta figuras humanas con características surrealistas, como rostros con ojos de relojes o cuerpos entrelazados con objetos inanimados. La obra examina la delgada línea entre lo real y lo imaginario.</p>
+                </div>
+            </div>
+            <div class="coleccion">
+                <img src="/img/surreal3.jpg" alt="Obra 6">
+                <div class="overlay">
+                    <h3>El Jardín de los Deseos</h3>
+                    <p>Un jardín fantástico lleno de elementos que desafían la lógica: flores flotantes, relojes que se derriten y criaturas míticas. La obra invita al espectador a explorar un mundo donde los límites de la realidad son borrosos.</p>
+                </div>
+            </div>
+            <div class="coleccion">
+                <img src="/img/vanguard1.jpg" alt="Obra 7">
+                <div class="overlay">
+                    <h3>Fragmentos de Futuro</h3>
+                    <p>Una obra que fusiona arte y tecnología, integrando patrones digitales y elementos de codificación en una composición visualmente estimulante. La pieza refleja la influencia de la tecnología en el arte contemporáneo.</p>
+                </div>
+            </div>
+            <div class="coleccion">
+                <img src="/img/vanguard3.jpg" alt="Obra 7">
+                <div class="overlay">
+                    <h3>Ruptura del Espacio</h3>
+                    <p>Una exploración de la geometría y la estructura moderna, utilizando materiales y técnicas innovadoras para desafiar la percepción del espacio y la forma. La pieza presenta una interacción dinámica entre elementos sólidos y vacíos.</p>
+                </div>
+            </div>
+            <div class="coleccion">
+                <img src="/img/vanguard2.jpg" alt="Obra 8">
+                <div class="overlay">
+                    <h3>Códigos de la Era Digital</h3>
+                    <p>Una obra que fusiona arte y tecnología, integrando patrones digitales y elementos de codificación en una composición visualmente estimulante. La pieza refleja la influencia de la tecnología en el arte contemporáneo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto">
+        <h2>Agenda tu Visita</h2>
+        <p>Visita nuestra galería y participa en actividades interactivas con los artistas.</p>
+        <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> Dirección: Calle Ejemplo 123, Ciudad, País</li>
+            <li><i class="fas fa-phone"></i> Teléfono: +123 456 789</li>
+            <li><i class="fas fa-envelope"></i> Email: contacto@galeriademoderno.com</li>
+        </ul>
+        <button class="schedule-appointment">Agendar Visita</button>
+                    <div class="footer-activities">
+                        <h3>Actividades Disponibles</h3>
+                        <div class="activity">
+                            <i class="fas fa-paint-brush"></i>
+                            <div class="activity-info">
+                                <h4>Visitas Guiadas</h4>
+                                <p>Explora nuestras exposiciones con guías expertos que te brindarán detalles y anécdotas sobre cada obra.</p>
+                            </div>
+                        </div>
+                        <div class="activity">
+                            <i class="fas fa-calendar-check"></i>
+                            <div class="activity-info">
+                                <h4>Eventos Especiales</h4>
+                                <p>Participa en eventos exclusivos, como inauguraciones y charlas con artistas.</p>
+                            </div>
+                        </div>
+                        <div class="activity">
+                            <i class="fas fa-users"></i>
+                            <div class="activity-info">
+                                <h4>Actividades Interactivas</h4>
+                                <p>Disfruta de talleres y actividades interactivas diseñadas para involucrar a los visitantes.</p>
+                            </div>
+                        </div>
+                        <div class="activity">
+                            <i class="fas fa-camera"></i>
+                            <div class="activity-info">
+                                <h4>Sesiones de Fotografía</h4>
+                                <p>Captura la esencia de nuestras exposiciones en sesiones de fotografía organizadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>Galería de Arte Moderno</h1>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#galeria">Exposiciones</a></li>
+                    <li><a href="#contacto">Agendar Visita</a></li>
+                    <li><a href="#artistas">Artistas</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2024 Galería de Arte Moderno. Todos los derechos reservados.</p>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Ejemplo 123, Ciudad, País</p>
+                <p><i class="fas fa-phone"></i> +123 456 789 | <i class="fas fa-envelope"></i> contacto@galeriademoderno.com</p>
+            </div>
+    </footer>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
